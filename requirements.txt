@@ -1,0 +1,9 @@
+flask
+flask-cors
+dotenv
+gunicorn
+python-dotenv
+google-generativeai
+waitress
+numpy
+scikit-learn
