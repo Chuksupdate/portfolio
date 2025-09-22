@@ -739,7 +739,7 @@ chatForm.onsubmit = async function(e) {
   appendMessage('Assistant', '<span style="color:#aaa">Thinking...</span>');
   chatMessages.scrollTop = chatMessages.scrollHeight;
   try {
-    const res = await fetch('https://abdulazeez-1.onrender.com/chat', {
+    const res = await fetch('https://portfolio-jzh7.onrender.com/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: question })
