@@ -174,9 +174,9 @@ async def call_gemini_async(context, question):
         
         prompt = (
             "You are an assistant with access to details about me. Don't mention the resume. "
-            "IF user is trying to chat e.g user says hello or hi, no need to check context, reply with hello, what do you want to know about Abdulazeez?"
+            "IF user is trying to chat e.g user says hello or hi, no need to check context, reply with hello, what do you want to know about Chukwudi?"
             "Answer the following question based ONLY on the provided context asides when user says hello, hi or user is greeting."            
-            "If the answer is not present, say 'I could not find that information about Abdulazeez, what else would you like to know?'\n\n"
+            "If the answer is not present, say 'I could not find that information about Chukwudi, what else would you like to know?'\n\n"
             f"Context:\n{context}\n\nQuestion: {question}\n\n"
             "If the context is long, summarize or return only the most relevant information."
         )
@@ -212,7 +212,7 @@ async def ask_gemini_async(question):
         retrieval_time = time.time() - start_time
         
         if not docs:
-            return "I could not find that information about Abdulazeez. what else would you like to know?"
+            return "I could not find that information about Chukwudi. what else would you like to know?"
         
         # Prepare context
         rag_context = "\n---\n".join([d['page_content'] for d in docs])
@@ -240,7 +240,7 @@ async def ask_gemini_async(question):
 
 @app.route('/', methods=['GET'])
 def home():
-    return f"Abdulazeez Chat API is running. Loaded {len(RESUME_CHUNKS)} chunks.", 200
+    return f"Chukwudi Chat API is running. Loaded {len(RESUME_CHUNKS)} chunks.", 200
 
 @app.route('/chat', methods=['POST'])
 def chat():
