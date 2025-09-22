@@ -170,7 +170,7 @@ async def call_gemini_async(context, question):
     """Async Gemini API call"""
     try:
         genai.configure(api_key=GEMINI_API_KEY)
-        model = genai.GenerativeModel('gemini-2.5-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         prompt = (
             "You are an assistant with access to details about me. Don't mention the resume. "
